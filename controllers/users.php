@@ -10,8 +10,8 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     $sql = "SELECT * FROM users";
     $datos = $conexion->consultar($sql);
 
-   $template .= ' <div class="table-responsive mt-4">';
-   $template .= ' <table id="usuarios_table" class="table table-striped table-bordered" style="width:100%">';
+   $template .= ' <div class="col-12 responsive mt-4">';
+   $template .= ' <table id="usuarios_table" class="table table-head-bg-brand paginated-datatable mt-3" style="100%">';
    $template .= ' <thead class=" text-dark">';
    $template .= ' <th></th>';
    $template .= ' <th>ID</th>';

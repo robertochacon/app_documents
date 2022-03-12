@@ -22,6 +22,7 @@
             transition:.5s;
         }
         .hover a{
+            color:#212529;
             text-decoration:none;
         }
         .hover:hover{

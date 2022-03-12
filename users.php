@@ -36,13 +36,13 @@
             <div class="col-12">
 
                     <div class="row">
-                        <div class="col-lg-5 col-md-5 col-sm-10  p-5 text-center">
+                        <div class="col-lg-4 col-md-4 col-sm-10  p-5 text-center">
                             <h2>Usuarios</h2>
                             <img src="./assets/img/users.jpeg" width="50%" alt=""><br>
                             <button type="button" class="btn btn-block btn-primary" data-bs-toggle="modal" data-bs-target="#registroUsuarioModal">Agregar nuevo usuario</button>
                         </div>
-                        <div class="col-lg-7 col-md-7 col-sm-12">
-                            <div id="datos_usuarios"></div>
+                        <div class="col-lg-8 col-md-8 col-sm-12">
+                            <div lass="row justify-content-center" id="datos_usuarios"></div>
                         </div>
                     </div>
 
