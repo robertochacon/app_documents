@@ -42,7 +42,7 @@
                             <button type="button" class="btn btn-block btn-primary" data-bs-toggle="modal" data-bs-target="#registroUsuarioModal">Agregar nuevo usuario</button>
                         </div>
                         <div class="col-lg-8 col-md-8 col-sm-12">
-                            <div lass="row justify-content-center" id="datos_usuarios"></div>
+                            <div class="row justify-content-center" id="datos_usuarios"></div>
                         </div>
                     </div>
 

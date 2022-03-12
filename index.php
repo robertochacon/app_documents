@@ -26,6 +26,7 @@ if(isset($_SESSION['username'])){
             background-size:cover;
             background-repeat:no-repeat;
             background-attachment: fixed;
+            /* background: #273746; */
         }
     </style>
 </head>

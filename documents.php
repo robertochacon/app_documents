@@ -35,7 +35,7 @@
 
         <div class="row">
             <div class="col-12">
-                <div id="datos_documentos"></div>
+                <div class="row justify-content-center" id="datos_documentos"></div>
             </div>
         </div>
 

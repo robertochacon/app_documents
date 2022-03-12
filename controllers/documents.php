@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     $sql = "SELECT * FROM documents";
     $datos = $conexion->consultar($sql);
 
-   $template .= ' <div class="table-responsive mt-4">';
+   $template .= ' <div class="col-12 table-responsive mt-4">';
    $template .= ' <table id="documents_table" class="table table-striped table-bordered" style="width:100%">';
    $template .= ' <thead class=" text-dark">';
    $template .= ' <th></th>';
