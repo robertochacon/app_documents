@@ -13,6 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
    $template .= ' <div class="table-responsive mt-4">';
    $template .= ' <table id="usuarios_table" class="table table-striped table-bordered" style="width:100%">';
    $template .= ' <thead class=" text-dark">';
+   $template .= ' <th></th>';
    $template .= ' <th>ID</th>';
    $template .= ' <th>Nombre</th>';
    $template .= ' <th>Estado</th>';
@@ -29,6 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
        }
 
         $template .= '<tr id="item_'.$item['id'].'" identificador="'.$item['id'].'" username="'.$item['username'].'" password="'.$item['password'].'" status="'.$item['status'].'">';
+        $template .= '<td><img src="./assets/img/user.png" width=""></td>';
         $template .= '<td>'.$item['id'].'</td>';
         $template .= '<td>'.$item['username'].'</td>';
         $template .= '<td>'.$status.'</td>';
@@ -46,7 +48,21 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
     $opc = $_POST['opc'];
 
-    if($opc == 'insert'){
+    if($opc == 'login'){
+    
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $login = $conexion->login($username, $password);
+    
+        if($login){
+            $json['message'] = "success"; 
+        }else{
+            $json['message'] = "fail"; 
+        }
+        
+        echo json_encode($json);
+    
+    }else  if($opc == 'insert'){
     
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -90,6 +106,11 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
             return false;
         }
     
+    }else if($opc == 'logout'){
+        session_start();
+        session_unset();
+        session_destroy();
+        echo 'logout';	
     }
 
 

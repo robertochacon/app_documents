@@ -73,21 +73,22 @@ public $conn;
 		return $resultado;
 	}
 
-	public function login($user, $pass){
+	public function login($username, $pass){
 		$cx = self::getConexion();
-		$sql = "SELECT * FROM users WHERE usuario = '{$user}' AND clave = '{$pass}'";
+		$sql = "SELECT * FROM users WHERE username = '{$username}' AND password = '{$pass}'";
 		$query = mysqli_query($cx, $sql);
 		$count = mysqli_num_rows($query);
-		if ($count == 1) {
+
+		if ($count >= 1) {
 
 			$datos = mysqli_fetch_array($query);
 			session_start();
 			$_SESSION['id'] = $datos['id'];
-			$_SESSION['user'] = $datos['usuario'];
-			$_SESSION['role'] = $datos['role'];
+			$_SESSION['username'] = $datos['username'];
+			$_SESSION['status'] = $datos['status'];
 
 			// header("Location: dentro.php");
-			echo "1";
+			return true;
 		}else{
 			return false;
 		}
